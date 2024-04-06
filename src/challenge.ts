@@ -4,6 +4,7 @@ interface Car {
   year: number;
   color: string;
   isElectric: boolean;
+  remoteStart?: boolean;
 }
 
 export function describeCar(specs: Car): string {

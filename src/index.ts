@@ -26,4 +26,7 @@ const exampleModel = {
   isElectric: false,
 };
 
+const exampleModel2 = { ...exampleModel, isElectric: true, remoteStart: true };
+
 console.log(describeCar(exampleModel));
+console.log(describeCar(exampleModel2));
