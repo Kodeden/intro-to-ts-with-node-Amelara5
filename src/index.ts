@@ -1,3 +1,5 @@
+import { describeCar } from "./challenge.js";
+
 interface Person {
   firstName: string;
   lastName: string;
@@ -15,3 +17,13 @@ const citizen = {
 };
 
 console.log(greet(citizen));
+
+const exampleModel = {
+  make: "Toyota",
+  model: "Corolla",
+  year: 2024,
+  color: "black",
+  isElectric: false,
+};
+
+console.log(describeCar(exampleModel));
