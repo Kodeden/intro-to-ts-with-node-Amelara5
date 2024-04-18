@@ -1,26 +1,6 @@
-import { describeCar } from "./challenge.js";
-
-interface Address {
-  street: string;
-  city: string;
-  state: string;
-  zip: number;
-}
-
-interface Person {
-  readonly id: number;
-  firstName: string;
-  lastName: string;
-  age: number;
-
-  address: Address;
-
-  hobbies?: string[];
-}
-
-export function greet(personName: Person): string {
-  return `Hello, ${personName.firstName} ${personName.lastName}`;
-}
+import { describeCar } from "./challengeCar.js";
+import type { EmployeePerson } from "./challengePerson.js";
+import { greet } from "./challengePerson.js";
 
 const citizen = {
   id: 1,
@@ -35,6 +15,23 @@ const citizen = {
   },
 };
 
+const employee: EmployeePerson = {
+  id: 2,
+  firstName: "Alice",
+  lastName: "Smith",
+  age: 28,
+  address: {
+    street: "456 Main St",
+    city: "Metropolis",
+    state: "NY",
+    zip: 10001,
+  },
+  company: "Globex Corporation",
+  jobTitle: "Software Developer",
+};
+
+console.log(greet(employee)); // Works as employee is a Person
+
 console.log(greet(citizen));
 
 const exampleModel = {
@@ -46,7 +43,7 @@ const exampleModel = {
   vehicleType: "other",
 };
 
-// const exampleModel2 = { ...exampleModel, isElectric: true, remoteStart: true };
+const exampleModel2 = { ...exampleModel, isElectric: true, remoteStart: true };
 
 console.log(describeCar(exampleModel));
-// console.log(describeCar(exampleModel2));
+console.log(describeCar(exampleModel2));
