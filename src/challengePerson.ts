@@ -22,7 +22,14 @@ interface Employee {
   salary?: number;
 }
 
+interface Student {
+  university: string;
+  major: string;
+  graduationYear: string;
+}
+
 export type EmployeePerson = Person & Employee;
+export type StudentPerson = Person & Student;
 
 export function greet(personName: Person): string {
   return `Hello, ${personName.firstName} ${personName.lastName}`;

@@ -1,5 +1,5 @@
 import { describeCar } from "./challengeCar.js";
-import type { EmployeePerson } from "./challengePerson.js";
+import type { EmployeePerson, StudentPerson } from "./challengePerson.js";
 import { greet } from "./challengePerson.js";
 
 const citizen = {
@@ -30,9 +30,27 @@ const employee: EmployeePerson = {
   jobTitle: "Software Developer",
 };
 
+const student: StudentPerson = {
+  id: 3,
+  firstName: "John",
+  lastName: "Doe",
+  age: 29,
+  address: {
+    street: "987 2nd St",
+    city: "Somewhere",
+    state: "AZ",
+    zip: 98980,
+  },
+  university: "Arizona University",
+  major: "Software Developer",
+  graduationYear: "2024",
+};
+
 console.log(greet(employee)); // Works as employee is a Person
 
 console.log(greet(citizen));
+
+console.log(greet(student));
 
 const exampleModel = {
   make: "Toyota",
