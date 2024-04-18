@@ -29,20 +29,10 @@ export function describeCar(specs: Car): string {
 //   year: 2024,
 //   color: "black",
 //   isElectric: false,
+//   vehicleType: "other",
 // };
-
-// describeCar(exampleModel);
-
-const exampleModel = {
-  make: "Toyota",
-  model: "Corolla",
-  year: 2024,
-  color: "black",
-  isElectric: false,
-  vehicleType: "other",
-};
 
 // const exampleModel2 = { ...exampleModel, isElectric: true, remoteStart: true };
 
-console.log(describeCar(exampleModel));
+// console.log(describeCar(exampleModel));
 // console.log(describeCar(exampleModel2));
