@@ -1,3 +1,14 @@
+type VehicleType =
+  | "car"
+  | "truck"
+  | "suv"
+  | "van"
+  | "motorcycle"
+  | "boat"
+  | "plane"
+  | "spaceship"
+  | "other";
+
 interface Car {
   make: string;
   model: string;
@@ -5,10 +16,11 @@ interface Car {
   color: string;
   isElectric: boolean;
   remoteStart?: boolean;
+  vehicleType: VehicleType;
 }
 
 export function describeCar(specs: Car): string {
-  return `The car you are looking for is a ${specs.make} ${specs.model}.`;
+  return `The ${specs.vehicleType} you are looking for is a ${specs.make} ${specs.model}.`;
 }
 
 // const exampleModel = {
