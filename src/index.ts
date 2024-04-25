@@ -1,4 +1,4 @@
-import { describeCar } from "./challengeCar.js";
+import { describeCar, type Car } from "./challengeCar.js";
 import type { EmployeePerson, StudentPerson } from "./challengePerson.js";
 import { greet } from "./challengePerson.js";
 
@@ -59,9 +59,14 @@ const exampleModel = {
   color: "black",
   isElectric: false,
   vehicleType: "other",
-};
+} satisfies Car;
 
-const exampleModel2 = { ...exampleModel, isElectric: true, remoteStart: true };
+const exampleModel2: Car = {
+  ...exampleModel,
+  isElectric: true,
+  remoteStart: true,
+  vehicleType: "plane",
+};
 
 console.log(describeCar(exampleModel));
 console.log(describeCar(exampleModel2));
